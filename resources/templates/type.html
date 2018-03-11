@@ -1,0 +1,28 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<div class="about">
+   <div class="about-info">
+      <h3>{{type.name}}</h3>
+   </div>
+</div>
+<div class="business-team">
+   <div class="team-info">
+      <h3>DRINKS</h3>
+   </div>
+   <div class="business-grids">
+      {% for d in drinks %}
+<div class="square">
+   <div class="content-pic">
+        <div class="table">
+            <div class="table-cell">
+                <a href="/drink/{{d.id}}"></a>
+                {{d.name}}
+            </div>
+        </div>
+    </div>
+</div>
+      {% endfor %}
+   </div>
+   <div class="clearfix"></div>
+</div>
+{% endblock %}
